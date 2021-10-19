@@ -23,9 +23,10 @@ func main() {
 	check(err)
 	for _, d := range dir {
 		//fmt.Println(d.Name())
-		//fmt.Println(path.Join(path.Dir("tmp"), d.Name()))
-		fmt.Println(path.Join([]string{"tmp", d.Name()}...))
-		os.RemoveAll(path.Join([]string{"tmp", d.Name()}...))
+		fmt.Println(path.Join("tmp", d.Name()))
+		os.RemoveAll(path.Join("tmp", d.Name()))
+		//fmt.Println(path.Join([]string{"tmp", d.Name()}...))
+		//os.RemoveAll(path.Join([]string{"tmp", d.Name()}...))
 	}
 
 }
